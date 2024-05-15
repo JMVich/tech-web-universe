@@ -1,0 +1,487 @@
+/* VARIABLES */
+
+:root {
+
+/* COLORES */
+
+--interfaz-color: rgb(57, 72, 103);
+
+}
+
+body {
+  font-family: 'Raleway';
+  background: rgb(26, 47, 91);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway';
+}
+
+p {
+  line-height: 1.75;
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* |||||||||||| SITE HEADING ||||||||||||*/
+.site-heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: 'Raleway';
+}
+
+.site-heading .site-heading-upper {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.site-heading .site-heading-lower {
+  font-size: 5.9rem;
+  font-weight: 100;
+  line-height: 4rem;
+}
+
+.page-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+
+/* |||||||||||| SECTION HEADING ||||||||||||*/
+.section-heading {
+  text-transform: uppercase;
+}
+
+.section-heading .section-heading-upper {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 800;
+  padding-bottom:.5rem;
+  color: white;
+}
+
+.section-heading-lower {
+  display: block;
+  font-size: 3rem;
+  font-weight: 100;
+  color: white;
+}
+
+.heading-animation {
+  display: block;
+  font-size: 3rem;
+  font-weight: 100;
+  color: white;
+  animation: focus-in-expand 2.5s ease-in-out forwards;
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+.section-heading .section-heading-under {
+  display: block;
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: 300;
+  margin-top:.5rem;
+}
+
+.bg-faded {
+  background-color: var(--interfaz-color);
+}
+
+
+/* |||||||||||| MAIN NAV ||||||||||||*/
+#mainNav {
+  background-color: var(--interfaz-color);
+  font-family: 'Raleway';
+}
+
+#mainNav .navbar-brand {
+  color: white;
+  font-size: 2.25rem;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+}
+
+#mainNav .navbar-nav .nav-item.active .nav-link {
+  color: white;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.navbar-toggler {
+  font-size: 1.5rem;
+}
+
+
+/* |||||||||||| MAIN NAV MEDIA 1199 ||||||||||||*/
+@media (min-width: 1199px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  #mainNav .navbar-nav .nav-item.active .nav-link:hover {
+    color: white;
+  }
+  .nav-link:hover {
+    transform: scale(1.5);
+  }
+  .nav-link {
+    transition: transform 150ms ease-in-out;
+  }  
+
+}
+
+
+.btn-xl {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.intro {
+  position: relative;
+  color: white;
+}
+
+
+/* |||||||||||| INTRO MEDIA 1199 ||||||||||||*/
+@media (min-width: 1199px) {
+  .intro .intro-img {
+    width: 75%;
+    float: left;
+    transform: scale(1);
+    transition: .2s ease-in-out;
+  }
+
+  .intro .intro-img:hover {
+    width: 75%;
+    float: left;
+    transform: scale(1.04);
+  }
+
+  .intro .intro-text {
+    left: 499;
+    width: 60%;
+    margin: 5rem;
+    background-color: var(--interfaz-color);
+    color: white;
+    position: absolute;
+    margin-top: 129px;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
+
+
+/* |||||||||||| INTRO MEDIA 1199 ||||||||||||*/
+@media (min-width: 1199px) {
+  .intro .intro-text {
+    width: 45%;
+  }
+}
+
+
+/* |||||||||||| CTA ||||||||||||*/
+.cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgb(219, 226, 239);
+}
+
+.cta .cta-inner {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: var(--interfaz-color);
+  color: white;
+}
+
+.cta .cta-inner:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0rem solid white;
+}
+
+.cta .cta-innerv {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* |||||||||||| ABOUT HEADING MEDIA 1199 ||||||||||||*/
+@media (min-width: 1199px) {
+  .about-heading .about-heading-img {
+    position: relative;
+    z-index: 0;
+  }
+  .about-heading .about-heading-content {
+    margin-top: -5rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+/* |||||||||||| PRODUCT ITEM MEDIA 1199 ||||||||||||*/
+@media (min-width: 1199px) {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -3rem;
+  }
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 1;
+    margin-top: -3rem;
+    max-width: 50vw;
+  }
+}
+
+
+/* |||||||||||| LIST HOURS MEDIA 1199 ||||||||||||*/
+@media (min-width: 1199px) {
+  .list-hours {
+    width: 50%;
+    font-size: 1.1rem;
+  }
+}
+
+.address strong {
+  font-size: 1.2rem;
+}
+
+.footer {
+   background-color: var(--interfaz-color);
+}
+
+.btn {
+  box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
+}
+
+.font-weight-light {
+  font-weight: 100 !important;
+}
+
+
+/* |||||||||||| MBT ||||||||||||*/
+.mbtm{
+  padding-top: 5rem;
+}
+
+.mbt{
+  padding-top: 2rem;
+}
+
+.mbt1{
+  padding-top: 1.25rem;
+}
+
+
+/* |||||||||||| A LINK ||||||||||||*/
+a.link{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+a.link:hover{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.section-content{
+  font-family: 'Lora' !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
+ul.errorlist{
+  padding-top: .75rem;
+  font-style: italic;
+  color: red;
+}
+
+
+/* |||||||||||| LINKS CATEGORIAS ||||||||||||*/
+.linksCategorias{
+color: white !important;
+text-decoration: underline;
+}
+
+.linksCategorias:hover{
+text-decoration: none;
+}
+
+.contenedorFormulario{
+  background-color: var(--interfaz-color);
+  width: 40%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 5px 3px;
+}
+
+.carro-container{
+  margin-top: 20px;
+}
+
+.clase1 {
+  position: relative; 
+  top: 0px;
+  text-align: right; 
+  margin-right: 35px; 
+  color: white;
+}
+
+
+/* Estilos para pantallas más grandes que 600px pero más pequeñas que 1199px */
+@media (min-width: 600px) and (max-width: 1199px) {
+
+  body {
+    font-size: 2rem;
+  }
+
+  #mainNav {
+    font-size: 2.7rem;
+    margin-top: 50px;
+  }
+
+  .clase1 {
+    position: relative; 
+    top: 42px;
+    text-align: right; 
+    margin-right: 35px; 
+    color: white;
+  }
+
+  .intro .intro-text {
+    left: 778;
+    top: 493;
+    width: 61%;
+    margin: -26rem;
+    background-color: var(--interfaz-color);
+    color: white;
+    position: absolute;
+  }
+
+  .mb-3, .my-3 {
+    margin-bottom: 7px!important;
+  }
+
+  .p-5 {
+    padding: 2rem!important;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  .page-section {
+    margin-top: 110px;
+  }
+
+  .cta {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+    .cta .cta-inner {
+      padding: 2rem;
+  }
+
+  .rounded {
+    border-radius: 7.25rem!important;
+  }
+
+  .navbar-toggler {
+    font-size: 1.8rem;
+    padding: 1.25rem 1.75rem;
+  }
+
+  #mainNav .navbar-brand {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 1.2rem 1rem;
+  }
+
+  .section-heading .section-heading-upper {
+    font-size: 2rem;
+  }
+
+  p {
+    line-height: 1.85;
+  }
+}
+
+a {
+  font-weight: bold;
+  color: white;
+}
+
+.botonRadio {
+border-radius: 3.25rem; 
+margin-right: auto;
+}
+
+.rounded {
+  border-radius: 7.25rem!important;
+}

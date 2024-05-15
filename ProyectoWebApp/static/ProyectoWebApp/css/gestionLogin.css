@@ -1,0 +1,72 @@
+
+
+@media (min-width: 1199px) {
+.login{
+    background-color: rgb(57, 72, 103);
+    width: 65%;
+    margin: 103px auto;
+    border-radius: 80px;
+    padding: -5px 50px;
+    height: 48%;
+    font-size: 1rem;
+    color: white;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 3rem!important;
+    padding: 13 200;
+}
+
+.btn {
+    margin-left: 46%
+}
+
+}
+
+
+@media (min-width: 600px) and (max-width: 1199px) {
+
+.footer {
+    position: inherit;
+    bottom: 0;
+    width: 100%;
+    margin-top: 80;
+}
+
+.form-control {
+    font-size: 3rem;
+}
+
+.btn {
+    font-size: 3rem;
+    margin-top: 28;
+    position: absolute;
+    left: 25%;
+    width: 50%;
+}
+
+.alert-danger {
+    margin-left: 140;
+    margin-top: 24;
+    position: fixed;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 85px!important;
+}
+
+.login {
+    display: flex;
+    align-items: normal;
+    flex-flow: column-reverse;
+    background-color: rgb(57, 72, 103);
+    width: 85%;
+    margin: 261px auto;
+    border-radius: 88px;
+    padding: 350px 43px;
+    font-size: 2.8rem;
+    color: white;
+}
+
+}
+

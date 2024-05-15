@@ -1,0 +1,39 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+  <link href="{% static 'ProyectoWebApp/css/gestionStripe.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <!-- Mostrar resumen y botón de pago de Stripe -->
+    <div class = "stripe">
+        <h3>SECCIÓN DE PAGO</h3>
+        <br>
+        <p>¡Listo para finalizar tu compra! Haz clic en 'Pagar con tarjeta' para iniciar el proceso de pago seguro.</p>
+        <p>Tus detalles de tarjeta están protegidos con encriptación de alta seguridad.</p>
+        <p>Puedes realizar el pago de los productos mediante tarjeta de débito y crédito</p>
+        <p class="stilop">¿Tienes problemas con el pago? Si encuentras algún error, asegúrate de verificar los detalles de tu tarjeta o contáctanos para recibir ayuda.</p>
+        <p>Si necesitas ayuda durante el proceso de pago, estamos aquí para ti. Contáctanos con el siguiente email y teléfono: juanviscovich14@gmail.com / +54 3471 331775</p>
+        <br>
+        <br>
+        <form action="{% url 'procesar_pedido' %}" method="post" id="payment-form" class="stilo">
+            {% csrf_token %}
+            <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_51NgXjZBjXHxUKBZ4MGUWEe7aQbwxZr1pq5q7xcIgcQMmtEShUELeWW6D8KcVqHVdwztpaIthMKoreBNqKho6xhcP00F8yg0DbV"
+                data-amount="{{importe_total_carro}}"
+                data-name="Tienda"
+                data-description="Pago de pedido"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto"
+                data-label="Pagar con tarjeta"
+                data-currency="ARS">
+            </script>
+            <br>
+        </form>
+    </div>
+    
+{% endblock %}

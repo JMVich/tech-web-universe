@@ -1,0 +1,33 @@
+@media (min-width: 1199px) {
+.legal{
+    background-color: rgba(89, 89, 89, 0.508);
+    width: 55%;
+    margin: 45px auto;
+    border-radius: 15px;
+    padding: 23px 36px;
+    color: white;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+.legal{
+    background-color: rgba(89, 89, 89, 0.508);
+    width: 85%;
+    margin: 45px auto;
+    border-radius: 15px;
+    padding: 23px 36px;
+    color: white;
+}
+
+.footer{
+    position: inherit;
+    bottom: 0;
+    width: 100%;
+  }
+
+.h3, h3{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+}
+

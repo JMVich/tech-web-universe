@@ -1,0 +1,61 @@
+{% load static %}
+
+{% block extra_css %}
+  <link href="{% static 'ProyectoWebApp/css/gestionTiendaApp.css' %}" rel="stylesheet">
+{% endblock %}
+
+<table class="table table-bordered" class="carro-container" style="color: white; background-color: rgb(57, 72, 103); max-height: 900px; overflow-y: auto;">
+
+    <thead>
+        <tr>
+            <th colspan="3" class="text-center">
+                Carro compras
+            </th>
+        </tr>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% if request.session.carro.items %}
+            {% for key, value in request.session.carro.items %}
+                <tr class="text-center">
+                    <td>{{value.nombre}}</td>
+                    <td>{{value.cantidad}}</td>
+                    <td>
+                        <a href="{% url 'CarroApp:agregar' value.producto_id %}" class="r btn btn-sm btn-success">+</a>
+                        <a href="{% url 'CarroApp:restar' value.producto_id %}" class="r btn btn-sm btn-success" style="background-color: red; border: red;">-</a><br/>
+                        ${{value.precio}} 
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="3">
+                    <div class="alert alert-danger text-center">
+                        Sin productos
+                    </div>
+                </td>
+            </tr>
+        {% endif %}
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-center">
+                Total: {{importe_total_carro}} $
+            </td>
+        </tr>
+        {% if request.session.carro.items %}
+            <tr>
+                <td colspan="3" class="text-center">
+                    <a href="{% url 'procesar_pedido' %}" class="btn btn-success">Realizar pedido</a>
+                </td>
+            </tr>
+        {% endif %}
+    </tfoot>
+
+</table>

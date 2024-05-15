@@ -1,0 +1,71 @@
+@media (min-width: 1199px) {
+    .stripe {
+        background-color: rgb(219, 226, 239);
+        width: 55%;
+        margin: 56px auto;
+        border-radius: 34px;
+        padding: 30px 126px;
+        color: rgb(0, 0, 0);
+    }
+
+    .h3, h3 {
+        font-size: 2.75rem;
+    }
+
+    p {
+        line-height: 1.80;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .stilo {
+        place-content: center;
+        margin-left: 38%;
+        margin-top: -50;
+    }
+
+    }
+
+    
+    
+    @media (min-width: 600px) and (max-width: 1199px) {
+    .stripe {
+        background-color: rgb(219, 226, 239);
+        width: 95%;
+        margin: 130px auto;
+        border-radius: 35px;
+        padding: 93px 73px;
+        color: rgb(0, 0, 0);
+    }
+
+    .h3, h3 {
+        font-size: 4rem;
+        margin-bottom: 40;
+    }
+
+    p {
+        line-height: 2;
+        font-size: 2.3rem;
+        margin-bottom: 3rem;
+    }
+
+    .stripe-button-el span {
+
+        font-size: 40px !important;
+        height: 84px !important;
+        line-height: 80px !important;
+        padding: 0 228px !important;
+    }
+
+    .footer {
+        position: inherit;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .stilop {
+        margin-top: 12%;
+    }
+
+    }
+    

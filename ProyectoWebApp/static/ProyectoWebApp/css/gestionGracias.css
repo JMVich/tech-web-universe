@@ -1,0 +1,39 @@
+@media (min-width: 1199px) {
+    .gracias {
+        background-color: #28a745;
+        width: 55%;
+        margin: 56px auto;
+        border-radius: 34px;
+        padding: 30px 126px;
+        color: white;
+    }
+
+      .h3, h3 {
+        font-size: 2.55rem;
+        font-family: Calibri;
+    }
+    }
+    
+    @media (min-width: 600px) and (max-width: 1199px) {
+    .gracias {
+        background-color: #28a745;
+        width: 95%;
+        margin: 130px auto;
+        border-radius: 35px;
+        padding: 93px 73px;
+        color: white;
+    }
+    
+    .footer{
+        position: inherit;
+        bottom: 0;
+        width: 100%;
+      }
+
+    .h3, h3 {
+        font-size: 2.95rem;
+        font-family: Calibri;
+    }
+
+    }
+    

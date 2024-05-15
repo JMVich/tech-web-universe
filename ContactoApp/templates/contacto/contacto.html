@@ -1,0 +1,36 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+
+{% load static %}
+
+{% block extra_css %}
+  <link href="{% static 'ProyectoWebApp/css/gestionContactoApp.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <br>
+    <div class="contenedorFormulario">
+
+        {% if "valido" in request.GET %}
+
+            <p class="gracias">¡Gracias por contactarnos!</p>
+
+        {% endif %}
+
+        <form action="" method="post" style="text-align: center;">
+            {% csrf_token %}
+            <table class="estiloTabla">
+                {{miFormulario.as_table}}
+            </table>
+            
+            <input class="agrandarBoton" type="submit" value="Enviar">
+            <input class="agrandarBoton" type="reset" value="Reset">
+        </form>
+    </div>
+    <div class="contenedorFormulario2">Además, puedes contactarte con nuestro equipo llamando al siguiente número:
+        <span class="wrap">+54 3471 331775</span>
+    </div>
+    
+
+{% endblock %}

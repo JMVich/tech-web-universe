@@ -1,0 +1,59 @@
+.divAutor {
+  color: white; 
+  text-align: left; 
+  font-size: 0.8em;
+}
+
+.divCategoria {
+  width: 100%; 
+  margin-top: 40; 
+  text-align: center; 
+  color: white;
+}
+
+  /* Estilos para pantallas más grandes que 600px pero más pequeñas que 1199px */
+  @media (min-width: 600px) and (max-width: 1199px) {
+
+    .page-section {
+      margin-top: -51px;
+    }
+    
+    .container-divs {
+      margin-top: 88px;
+    }
+
+    .p-5 {
+      padding: 1rem!important;
+    }
+    
+    .section-heading .section-heading-lower {
+        font-size: 2rem;
+    }
+
+    .col-md-6 {
+        max-width: 60%;
+    }
+
+    .page-section {
+        margin-top: 31px;
+        margin-bottom: -1rem;
+        margin-left: 5rem;
+    }
+
+    .footer {
+        position: inherit;
+        bottom: 0;
+        width: 100%;
+        height: 226px;
+    }
+
+    .row {
+    margin-right: 3px;
+    margin-left: -75px;
+    }
+
+  }
+
+  .rounded {
+    border-radius: 2.25rem!important;
+  }

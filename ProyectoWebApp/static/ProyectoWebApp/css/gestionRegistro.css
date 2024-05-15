@@ -1,0 +1,78 @@
+.mb-3, .my-3 {
+    margin-bottom: -1rem!important;
+    padding: 45px 30px;
+}
+
+.form-text {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+.form-control {
+    color: black;
+    font-weight: bolder;
+}
+
+.divRegistro {
+    background-color: rgb(57, 72, 103);
+    width: 65%;
+    margin: 66px auto;
+    border-radius: 80px;
+    padding: -5px 50px;
+    font-size: 1rem;
+    color: white;
+}
+
+.btn {
+    margin-left: 46%;
+}
+
+
+@media (min-width: 600px) and (max-width: 1199px) {
+
+.footer {
+    position: initial;
+    bottom: 0;
+    width: 100%;
+    margin-top: 420;
+}
+
+.divRegistro {
+    display: flex;
+    align-items: normal;
+    flex-flow: column-reverse;
+    background-color: rgb(57, 72, 103);
+    width: 85%;
+    margin: auto;
+    border-radius: 80px;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.fontRegistro {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: -290;
+}
+
+.btn {
+    font-size: 3rem;
+    margin-top: 0;
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    margin-left: 0;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 85px!important;
+}
+
+.form-control {
+    font-size: 2.6rem;
+}
+
+}

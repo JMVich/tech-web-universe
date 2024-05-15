@@ -1,0 +1,29 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block extra_css %}
+  <link href="{% static 'ProyectoWebApp/css/gestionRegistro.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<br>
+
+<form class="fontRegistro" method="post" action="">
+
+    {% csrf_token %}
+
+    <div class="divRegistro">
+
+    {{form|crispy}}
+
+    <button type="submit" class="btn btn-success">Regístrate</button>
+
+    </div>
+
+</form>
+
+{% endblock %}

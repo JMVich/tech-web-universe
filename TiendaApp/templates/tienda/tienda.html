@@ -1,0 +1,43 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+  <link href="{% static 'ProyectoWebApp/css/gestionTiendaApp.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row justify-content-start margin700">
+                {% for producto in productos %}
+                    <div class="col-md-12 d-flex">
+                        <div class="card">
+                            <img src="{{producto.imagen.url}}" class="card-img-top flex-grow-1" style="object-fit: cover;">
+                            <div class="card-body">
+                                <h7 class="card-title">{{producto.nombre}}</h7>
+                                <p class="card-text">{{producto.precio}}&nbsp;$</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-center">
+                                <a href="{% url 'CarroApp:agregar' producto.id %}" class="btn btn-success btn-sm">Agregar al carro</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="carro-container p-3 bg-dark text-white" style="max-height: 1200px; overflow-y: auto;">
+                {% if request.user.is_authenticated %}
+                    {% include "carro/widget.html" %}
+                {% else %}
+                    <div class="alert alert-danger text-center">REGÍSTRATE PARA REALIZAR COMPRAS</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

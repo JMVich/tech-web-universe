@@ -1,0 +1,10 @@
+/* Estilos para pantallas más grandes que 600px pero más pequeñas que 1199px */
+@media (min-width: 600px) and (max-width: 1199px) {
+
+    .footer {
+        position: inherit;
+        bottom: 0;
+        width: 100%;
+      }
+
+}

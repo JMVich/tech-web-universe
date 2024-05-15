@@ -1,0 +1,25 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+  <link href="{% static 'ProyectoWebApp/css/gestionGracias.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="gracias">
+
+  <h3>¡Muchas gracias por realizar tu pedido!</h3>
+  <br>
+  <h3>Hemos recibido tu pedido y estamos emocionados de atenderte. En breve, nos pondremos en contacto contigo para confirmar los detalles y proporcionarte más información sobre el envío.</h3>
+  <br>
+  <h3>Si tienes alguna pregunta o necesitas asistencia adicional, nuestro equipo de atención al cliente estará encantado de ayudarte.</h3>
+  <br>
+  <h3>Puedes contactarnos por teléfono o correo electrónico. Estamos disponibles las 24 horas del día, los 7 días de la semana.</h3>
+  <br>
+  <h3>Teléfono: +54 3471 331775</h3> 
+     
+</div>
+
+{% endblock %}
